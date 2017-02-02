@@ -1,0 +1,156 @@
+/*
+    CSS for squared buttons
+*/
+body{padding-top:30px;}
+
+.btn-outlined {
+    border-radius: 0;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.btn-outlined.btn-primary {
+    background: none;
+    border: 3px solid #428bca;
+    color: #428bca;
+}
+.btn-outlined.btn-primary:hover,
+.btn-outlined.btn-primary:active,
+.btn-outlined.btn-primary-selected{
+    color: #FFF;
+    background: #428bca;
+    border-color: #428bca;
+}
+
+.btn-outlined.btn-success {
+    background: none;
+    border: 3px solid #47a447;
+    color: #47a447;
+}
+.btn-outlined.btn-success:hover,
+.btn-outlined.btn-success:active,
+.btn-outlined.btn-success-selected {
+    color: #FFF;
+    background: #47a447;
+}
+
+.btn-outlined.btn-info {
+    background: none;
+    border: 3px solid #39b3d7;
+    color: #39b3d7;
+}
+.btn-outlined.btn-info:hover,
+.btn-outlined.btn-info:active,
+.btn-outlined.btn-info-selected{
+    color: #FFF;
+    background: #39b3d7;
+}
+
+.btn-outlined.btn-warning {
+    background: none;
+    border: 3px solid #ed9c28;
+    color: #ed9c28;
+}
+.btn-outlined.btn-warning:hover,
+.btn-outlined.btn-warning:active,
+.btn-outlined.btn-warning-selected{
+    color: #FFF;
+    background: #ed9c28;
+}
+
+.btn-outlined.btn-danger {
+    background: none;
+    border: 3px solid #d2322d;
+    color: #d2322d;
+}
+.btn-outlined.btn-danger:hover,
+.btn-outlined.btn-danger:active,
+.btn-outlined.btn-danger-selected{
+    color: #FFF;
+    background: #d2322d;
+}
+/*Get rid of the shadows*/
+.btn{
+    text-shadow: 0 0 #fff;
+    -webkit-box-shadow: 0;
+    box-shadow: 0 0 #fff;
+}
+/*
+    END CSS for Squared Buttons
+*/
+
+
+/*
+    Bootstrap-select modifications
+*/
+/*Prevent that stupud spillover
+  when large values exist in the list*/
+#user{
+    width: 100%;
+}
+
+.bootstrap-select{
+    width: 100%;
+    max-width: 100% !important;
+}
+/*
+    END Bootstrap-select moda
+*/
+
+
+/*
+    Jonathan's Personal Design Stuff
+*/
+hr{
+    margin: 10px 0 10px 0;
+}
+
+.btn{
+    border-radius: 0;
+}
+
+.btn-default{
+    background: none;
+    border: 3px solid #4f38ff;
+    color: #4f38ff;
+}
+
+.dropdown-toggle.btn-default:hover{
+    background-color: #4f38ff !important;
+    color: #fff !important;
+}
+
+.btn-default:hover,
+.btn-default:active{
+    color: #FFF;
+    background: #4f38ff;
+    border-color: #4f38ff;
+}
+
+.form-control{
+    border-radius: 0;
+    border: 3px solid #4f38ff;
+}
+
+.filter-option{
+    text-align: center !important;
+}
+
+.btn-default:focus, .dropdown-toggle.btn-default{
+    background: none !important;
+    border: 3px solid #4f38ff !important;
+    color: #4f38ff !important;
+}
+
+textarea{
+    width: 100%;
+    height: 50vh;
+    overflow: auto;
+}
+
+.bootstrap-select{
+    width: 100% !important;
+}
+/*
+    END Jonathan Personal
+*/
