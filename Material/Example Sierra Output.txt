@@ -1,0 +1,81 @@
+1	b1558018		https://brunswick.ces.ncsu.edu/files/library/10/hil-8103.pdf	-25			false
+2	b1903982		https://www.ces.ncsu.edu/nreos/wood/old_stuff/trends.html	-25			false
+3	b1921742		https://christmastrees.ces.ncsu.edu/christmastrees-growing-christmas-trees-in-nc/	-25			false
+4	b2048884		https://gardening.ces.ncsu.edu/depts/ent/notes/Urban/pdf/ag428.pdf	-25			false
+5	b2211412		https://www.ces.ncsu.edu/depts/ent/notes/Urban/pdf/ifa.pdf	-25			false
+6	b2255341		https://www.ces.ncsu.edu/depts/fcs/pdfs/fcs505.pdf	-25			false
+7	b2257602		https://www.ces.ncsu.edu/depts/fcs/pdfs/fcs505.pdf	-25			false
+8	b2344543		https://www.ces.ncsu.edu/depts/fcs/pdfs/FCS507.pdf	-25			false
+9	b2350013		https://www.ces.ncsu.edu/depts/fcs/pdfs/FCS507.pdf	-25			false
+10	b2410562		https://www.ces.ncsu.edu/depts/fcs/pdfs/Fcs-509.pdf	-25			false
+11	b2410585		https://www.ces.ncsu.edu/depts/fcs/pdfs/Fcs-509.pdf	-25			false
+12	b2419280		https://www.ces.ncsu.edu/depts/fcs/pdfs/fcs-508.pdf	-25			false
+13	b2443152		https://www.ces.ncsu.edu/depts/agecon/WECO/publication/Final%20NPS%20Manual2004.pdf	-25			false
+14	b2447456		https://www.ces.ncsu.edu/depts/fcs/pdfs/fcs518-01.pdf	-25			false
+15	b2447457		https://www.ces.ncsu.edu/depts/fcs/pdfs/fcs518-02.pdf	-25			false
+16	b2447458		https://www.ces.ncsu.edu/depts/fcs/pdfs/fcs518-03.pdf	-25			false
+17	b2447459		https://www.ces.ncsu.edu/depts/fcs/pdfs/fcs518-04.pdf	-25			false
+18	b2447460		https://www.ces.ncsu.edu/depts/fcs/pdfs/fcs518-05.pdf	-25			false
+19	b2447461		https://www.ces.ncsu.edu/depts/fcs/pdfs/fcs518-06.pdf	-25			false
+20	b2447462		https://www.ces.ncsu.edu/depts/fcs/pdfs/fcs518-07.pdf	-25			false
+21	b2572626		https://www.nexusjournal.com/	-25			false
+22	b3267303		https://www.insects.org/	-25			false
+23	b3740251		https://www.gamedev.net/page/index.html	-25			false
+24	b4933165		https://www.ces.ncsu.edu/depts/agecon/WECO/documents/PAHfactsheet_AG-588-25V2_000.pdf	-25			false
+25	b5167586		https://www.fashionmuseum.co.uk/	-25			false
+26	b5194383		https://openstates.org/	-25			false
+27	b5194404		https://www.collinsdictionary.com/	-25			false
+28	b5959232		https://heri.ucla.edu/facPublications.php	-25			false
+29	b4933587		http://dspace.iup.edu/handle/2069/1867	-4			false
+30	b4934405		http://dspace.iup.edu/handle/2069/725	-4			false
+31	b4934488		http://dspace.iup.edu/handle/2069/426	-4			false
+32	b4942804		http://dspace.iup.edu/handle/2069/444	-4			false
+33	b5467722		http://dspace.iup.edu/handle/2069/398	-4			false
+34	b3223735		http://bama.ua.edu/~mbarrett/WSinDigitalArchives/Home.htm	-1			false
+35	b1086080		http://www.scholastic.com/teachers/lesson-plans/teaching-content/julie-wolves-discussion-guide	301		https://www.scholastic.com/teachers/lesson-plans/teaching-content/julie-wolves-discussion-guide	false
+36	b2026636		http://globaledge.msu.edu/international-internships/	301		https://globaledge.msu.edu/international-internships/	false
+37	b2287926		http://www.mysql.com	301		https://www.mysql.com/	false
+38	b2557026		http://sfpoetry.org	301		http://www.sfpoetry.org	false
+39	b3738142		http://xkcd.com/	301		https://xkcd.com/	false
+40	b3767653		http://digital.library.unt.edu/explore/collections/GKFC/	301		https://digital.library.unt.edu/explore/collections/GKFC/	false
+41	b4159848		http://digital.library.unt.edu/explore/collections/ESDC/	301		https://digital.library.unt.edu/explore/collections/ESDC/	false
+42	b4661270		http://www.thelinguists.com/	301		http://www.ironboundfilms.com/store	false
+43	b5195600		http://www.katechopin.org/	301		https://www.katechopin.org/	false
+44	b5434128		http://digital.library.unt.edu/explore/collections/TXFC/	301		https://digital.library.unt.edu/explore/collections/TXFC/	false
+45	b5470133		http://digital.library.unt.edu/ark:/67531/metadc11007/	301		https://digital.library.unt.edu/ark:/67531/metadc11007/	false
+46	b5648198		http://adage.com/portal/hWWqmkCJ3o	301		https://home.adage.com/portal/hWWqmkCJ3o&	false
+47	b1668872		http://www.americangeosciences.org/workforce/directory-of-geoscience-departments	302		https://www.americangeosciences.org/workforce/directory-of-geoscience-departments	false
+48	b2177906		http://www.noble.org/webapps/plantimagegallery/	302		https://www.noble.org/webapps/plantimagegallery/	false
+49	b2247026		http://www.ReadFilm.com	302		/WfZcK/	false
+50	b2441274		http://www.stats.org/	302		/	false
+51	b2491358		https://documents.un.org/prod/ods.nsf/home.xsp	302		https://documents.un.org/names.nsf?login&username=freeods1&password=319a89e974ba120f02fcf6f4d0af4a8c&RedirectTo=/prod/ods.nsf/home.xsp	false
+52	b2583749		http://www.jewishvirtuallibrary.org/index.html	302			false
+53	b3400476		http://www.filminfocus.com/focusfeatures/film/sin_nombre	302		http://focusfeatures.com/focusfeatures/film/sin_nombre	false
+54	b3408809		http://museumofglass.org/exhibitions/preston-singletary/	302		https://museumofglass.org/exhibitions/preston-singletary/	false
+55	b4876350		http://www.takepart.com/place-at-the-table	302		/place-at-the-table/	false
+56	b5181585		https://issuu.com/johnshopkinsaap/docs/gov1220_ndu-final-issuu?e=1427746/2295886	302		/johnshopkinsaap/docs/gov1220_ndu-final-issuu	false
+57	b5197646		http://www.bethelrural.org/books.html	302		/books.html	false
+58	b5887635		http://www.pdx.edu/anthropology/chinookan-peoples-supplemental-materials	302		https://www.pdx.edu/anthropology/chinookan-peoples-supplemental-materials	false
+59	b7033229		http://www.crcnetbase.com/doi/book/10.1201/9780203166352	302		http://www.crcnetbase.com/doi/book/10.1201/9780203166352?cookieSet=1	false
+60	b7301849		http://dx.doi.org/10.1093/acprof:oso/9780199746866.001.0001	302		http://www.oxfordscholarship.com/view/10.1093/acprof:oso/9780199746866.001.0001/acprof-9780199746866	false
+61	b7316389		https://appstatenc.libraryreserve.com/ContentDetails.htm?id=b93a857a-aa0e-401e-b457-40551ea02d5c	302		https://appstatenc.libraryreserve.com/10/50/en/ContentDetails.htm?id=b93a857a-aa0e-401e-b457-40551ea02d5c	false
+62	b7316390		https://appstatenc.libraryreserve.com/ContentDetails.htm?id=b8e1d642-e722-462a-86ca-c3eb5a1751a2	302		https://appstatenc.libraryreserve.com/10/50/en/ContentDetails.htm?id=b8e1d642-e722-462a-86ca-c3eb5a1751a2	false
+63	b7316391		https://appstatenc.libraryreserve.com/ContentDetails.htm?id=47511209-77b5-4435-b47f-cc2fb5c23ba8	302		https://appstatenc.libraryreserve.com/10/50/en/ContentDetails.htm?id=47511209-77b5-4435-b47f-cc2fb5c23ba8	false
+64	b7318171		https://appstatenc.libraryreserve.com/ContentDetails.htm?id=8c485ddd-ea4c-4bec-a269-d0b46e498f15	302		https://appstatenc.libraryreserve.com/10/50/en/ContentDetails.htm?id=8c485ddd-ea4c-4bec-a269-d0b46e498f15	false
+65	b1569929		https://ag-econ.ncsu.edu/economic-publications/n-c-state-economist/	403			false
+66	b2235760		https://handrit.is/	403			false
+67	b2549609		http://historicaltextarchive.com/	403			false
+68	b2552399		http://www.pedro.org.au/	403			false
+69	b3336079		http://grad-schools.usnews.rankingsandreviews.com/best-graduate-schools	403			false
+70	b3437760		http://research.sabr.org/business/	403			false
+71	b3439179		http://dl.mospace.umsystem.edu/mu/islandora/object/mu%3A383900#page/1/mode/2up	403			false
+72	b4242518		http://www.steynonline.com/7132/the-fall-of-mann	403			false
+73	b1086080		http://hbavenues.com/highpoint/library/pdf/HP_LL_TG_C5_3.pdf	404			false
+74	b1336923		http://www.wcu.edu/learn/office-of-the-provost/oipe/institutional-research/fact-books/index.asp	404			false
+75	b3215011		http://dl.mospace.umsystem.edu/mu/islandora/object/mu%3A383918	404			false
+76	b5682666		http://www.pbs.org/wgbh/masterpiece/archive/9/9.html	404			false
+77	b2443937		http://www.ceoexpress.com/home	500			false
+78	b3094172		http://www.kingcorn.net/	500			false
+79	b6584945		http://www.thecommononline.org/home	500			false
+80	b2401609		http://abc.nc.gov	503			false
+81	b4283065		http://catalogquicksearch.memphis.edu/iii/cpro/CollectionViewPage.external?lang=eng&sp=1000002&suite=def	503			false

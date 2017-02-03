@@ -151,6 +151,14 @@ textarea{
 .bootstrap-select{
     width: 100% !important;
 }
+
+.dropdown-menu>.active>a{
+    background: #4f38ff none;
+}
+
+.container{
+    display:none;
+}
 /*
     END Jonathan Personal
 */

@@ -1,0 +1,26 @@
+FORMAT:
+EntityId
+Url
+Error
+NewUrl
+UrlChanged
+Report Date
+Note
+Dup
+
+
+
+
+4	b1776080		http://demog.state.nc.us	301		http://osbm.nc.gov/facts-figures/demographics/	FALSE	10/25/2015
+5	b1557362		http://demog.state.nc.us/	301		http://osbm.nc.gov/facts-figures/demographics/	FALSE	10/25/2015
+10	b1587960		http://fraser.stlouisfed.org/publication-series/?id=258	301		https://fraser.stlouisfed.org/publication-series/?id=258	FALSE	10/25/2015
+11	b2520498		http://kids-with-cameras.org/bornintobrothels/	301		http://headfirstdevelopment.org/kidswithcamerasbornintobrothels/	FALSE	10/25/2015
+16	b4772975		http://stateoftheocean.org/index.cfm	301		http://www.stateoftheocean.org/index.cfm	FALSE	10/25/2015
+22	b4940120		http://www.facetpublishing.co.uk/title.php?id=7562	301		title.php?id=047562&category_code=	FALSE	10/25/2015
+26	b2157833		http://www.jrsainfo.org/	301		http://www.jrsa.org/	FALSE	10/25/2015
+27	b6156198		http://www.lib.unc.edu/mss/inv/j/John_Edwards_Memorial_Foundation.html	301		http://www2.lib.unc.edu/mss/inv/j/John_Edwards_Memorial_Foundation.html	FALSE	10/25/2015
+28	b6156190		http://www.lib.unc.edu/mss/inv/j/John_Edwards_Memorial_Foundation.html	301		http://www2.lib.unc.edu/mss/inv/j/John_Edwards_Memorial_Foundation.html	FALSE	10/25/2015
+65	b2961618		http://www.osbm.state.nc.us/disaster/NCDisasterRecoveryGuide.doc	301		http://www.osbm.nc.gov/disaster/NCDisasterRecoveryGuide.doc	FALSE	10/25/2015
+66	b3274418		http://www.osbm.state.nc.us/ncosbm/osbm_library/superpubs/bgt0911.shtm	301		http://www.osbm.nc.gov/ncosbm/osbm_library/superpubs/bgt0911.shtm	FALSE	10/25/2015
+67	b2496291		http://www.osbm.state.nc.us/osbm/publications.html	301		http://www.osbm.nc.gov/osbm/publications.html	FALSE	10/25/2015
+68	b1534653		http://www.osbm.state.nc.us/osbm/publications.html	301		http://www.osbm.nc.gov/osbm/publications.html	FALSE	10/25/2015
