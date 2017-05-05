@@ -6,12 +6,3 @@
  * Time: 12:05 PM
  */
 
-$conn = getHandler();
-
-function getHandler(){
-    try{
-        file_get_contents("/Config/");
-    }catch(Exception $e){
-        echo $e->getMessage();
-    }
-}

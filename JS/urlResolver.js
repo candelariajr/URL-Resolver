@@ -11,6 +11,7 @@ $(function() {
 });
 
 function startupState(){
+
     $(".container").show();
     $("#resultGrid").hide();
 }

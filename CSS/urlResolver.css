@@ -1,7 +1,6 @@
 /*
     CSS for squared buttons
 */
-body{padding-top:30px;}
 
 .btn-outlined {
     border-radius: 0;
@@ -83,7 +82,7 @@ body{padding-top:30px;}
 /*
     Bootstrap-select modifications
 */
-/*Prevent that stupud spillover
+/*Prevent that stupid spillover
   when large values exist in the list*/
 #user{
     width: 100%;
@@ -94,7 +93,7 @@ body{padding-top:30px;}
     max-width: 100% !important;
 }
 /*
-    END Bootstrap-select moda
+    END Bootstrap-select mods
 */
 
 
@@ -158,6 +157,25 @@ textarea{
 
 .container{
     display:none;
+}
+
+.btn{
+    padding: 3px 6px;
+}
+
+/*Get rid of whitespace at the top*/
+body{
+	padding-top:10px;
+}
+
+/*Get rid of whitespace after command Row*/
+#applicationHeader{
+	margin: -10px;
+}
+
+/*Reduce whitespace associated with hr separators*/
+hr{
+	margin: 5px 0 10px 0;
 }
 /*
     END Jonathan Personal

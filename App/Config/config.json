@@ -1,12 +1,12 @@
 {
-  "parameters": [
-    {"debug" : false},
-    {"handler" : "mysqlhandler.php"},
-    {"users_list" : [
-      "Bob Jerpo",
-      "Bob Loblaw",
-      "Harvey Birdman",
-      "The Dude"]
+    "parameters" : {
+        "debug" : false,
+        "handler" : "mysqlhandler.php",
+        "users_list" : [
+            "Bob Jerpo",
+            "Bob Loblaw",
+            "Harvey Birdman",
+            "The Dude"
+        ]
     }
-  ]
 }
