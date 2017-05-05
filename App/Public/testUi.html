@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--
+    //TODO: uncomment this before commit! Offline testing only!
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+            crossorigin="anonymous"></script>
+    -->
+    <base href="../../">
+    <script src="JS/jquery-3.1.1.min.js"></script>
+    <script src="JS/bootstrap.min.js"></script>
+    <script src="JS/bootstrap-select.js"></script>
+    <script src="JS/urlResolver.js"></script>
+    <link rel="stylesheet" type="text/css" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="CSS/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="CSS/bootstrap-select.min.css">
+    <link rel="stylesheet" type="text/css" href="CSS/urlResolver.css">
+<body>
+<div class="container-fluid">
+    <div class="row " id="returnOptionContainer">
+        <div class="col-sm-1">
+            <label for="returnOptionButton">Return:</label>
+        </div>
+        <div class="col-sm-2">
+            <button id="returnOptionButton" class="btn btn-success btn-outlined btn-block">Main Menu</button>
+        </div>
+        <div class="col-sm-9">
+
+        </div>
+    </div>
+    <div class="row mainContainer">
+        <div class="col-sm-1">
+            <label class="control-label" for="userList">Updated By:</label>
+        </div>
+        <div class="col-sm-2" id="userListContainer">
+
+        </div>
+        <div class="col-sm-1">
+            <label for="toggleButton">Toggle List:</label>
+        </div>
+        <div class="col-sm-2">
+            <button id="toggleButton" class="btn btn-primary btn-outlined btn-block">Toggle</button>
+        </div>
+        <div class="col-sm-6">
+        </div>
+    </div>
+    <div class="row mainContainer">
+        <div class="col-sm-12">
+            <br>
+        </div>
+    </div>
+    <div class="row mainContainer">
+        <div class="col-sm-1">
+            <label for="startButton">Start:</label>
+        </div>
+        <div class="col-sm-2">
+            <button id="startButton" class="btn btn-success btn-outlined btn-block">Start</button>
+        </div>
+        <div class="col-sm-1">
+            <label for="reportButton">Reporting:</label>
+        </div>
+        <div class="col-sm-2">
+            <button id="reportButton" class="btn btn-primary btn-outlined btn-block">Stats</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <br>
+        </div>
+    </div>
+
+    <!--
+    <div class="row">
+        <div class="col-sm-2">
+            <div class="row">
+                <div class="col-sm-2">Url</div>
+                <div class="col-sm-2">4</div>
+                <div class="col-sm-2">Of</div>
+                <div class="col-sm-2">12</div>
+                <div class="col-sm-4"></div>
+            </div>
+        </div>
+        <div class="col-sm-10">
+        </div>
+    </div>
+    -->
+
+    <hr class="mainContainer">
+    <div class="row mainContainer">
+        <div class="col-sm-2">
+            <div class="row">
+                <div id="currentUrlNumber" class="col-xs-1">1</div>
+                <div class="col-xs-1">Of</div>
+                <div id="totalUrlNumber" class="col-xs-1">3</div>
+            </div>
+        </div>
+        <div class="col-sm-10" id="currentUrlContainer" style="overflow: hidden">
+            https://web2.login.cornell.edu:443/?SID=842E5A2716179346&WAK0Service=HTTP/pda.library.cornell.edu@CIT.CORNELL.EDU&WAK2Name=&WAK0Realms=&ReturnURL=http://pda.library.cornell.edu/842E5A2716179346/cuwal2.c0ntinue&VerP=3&VerC=2.3.0.229/idmbuild@fox05.serverfarm.cornell.edu/RedHat5-64bit-55/2.2.3&VerS=Apache%2020151115-0420&VerO=Linux%20lstools01.library.cornell.edu%202.6.18-404.el5%20%231%20SMP%20Sat%20Mar%207%2004:14:13%20EST%202015%20x86_64%20x86_64%20x86_64%20GNU/Linux%20Red%20Hat%20Enterprise%20Linux%20Server%20release%205.11%20%20Tikanga%20&Accept=K2&WANow=1447587853&WAK2Flags=0&WAreason=1
+        </div>
+    </div>
+    <hr class="mainContainer">
+
+    <div class="row">
+        <div class="col-sm-12">
+            <br>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <label for="urlPastebin">Paste URLs: </label>
+        </div>
+    </div>
+    <div class="row" id="passtebinContainer">
+        <div class="col-sm-12">
+            <textarea id="urlPastebin"></textarea>
+        </div>
+    </div>
+    <div class="row" id="resultsContainer">
+        <div class="col-sm-12">
+            This is a div
+        </div>
+    </div>
+    <div class="row" id="reportContainer">
+
+    </div>
+</div>
+</body>
+<script>
+    (function($){
+        //on load get config object
+        getConfigObject();
+        assignStartFunction();
+        assignToggleFunction();
+    })();
+
+    //called by self-invoking function
+    function getConfigObject(){
+        $.ajax({url:"/newUrl/App/Config/config.json",
+            success: function(result){
+                processConfig(result);
+            }
+        });
+    }
+
+    //called by getConfigObejct callback form Ajsx request
+    function processConfig(results){
+        if(results.parameters != null && results.parameters.users_list != 0){
+            populateUsersList(results.parameters.users_list);
+        }else{
+            populateUsersList(["Default User"]);
+        }
+    }
+
+    //called by processConfig with data recieved from first Ajax Call
+    function populateUsersList(userArray){
+        var select = $("<select>");
+        select.attr('id', 'userList');
+        select.addClass('selectpicker');
+        for (var i = 0; i < userArray.length; i++){
+            console.log(userArray[i]);
+            select.append($("<option>").attr('value', userArray[i]).text(userArray[i]));
+        }
+        $("#userList").remove();
+        var userListContainer = $("#userListContainer");
+        userListContainer.append(select);
+        $(".selectpicker").selectpicker();
+    }
+
+    function assignStartFunction(){
+        $('#startButton').click(function(){
+            console.log("start clicked");
+            var urlList = $("#urlPastebin").val();
+            var urlArray = urlList.split("\n");
+            if(urlArray.length >= 1){
+                if(urlArray[0].split("\t").length == 8){
+                    processSierraData();
+                }else{
+                    processUrlList();
+                }
+            }
+
+            function processSierraData(){
+                console.log("Sierra data used");
+            }
+
+            function processUrlList(){
+                console.log("Regular URL List");
+            }
+        });
+    }
+
+    function assignToggleFunction(){
+
+    }
+
+
+</script>
+</html>
