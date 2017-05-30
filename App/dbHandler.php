@@ -15,14 +15,13 @@ function getHandler(){
         return "";
     }
 }
-echo $handler;
 $fileName = "";
 if($handler != ""){
     try{
         $fileName = json_decode($handler)->{'parameters'}->{'handler'};
+        require("Config/$fileName");
     }catch(Exception $e){
         echo "a handler file is not specified in the config.json file";
         $fileName = "";
     }
 }
-//require("Config/$fileName");

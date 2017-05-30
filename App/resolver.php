@@ -7,6 +7,6 @@
  */
 
 $outputVar = array("url" => "http://www.dawsonera.com/depp/reader/protected/external/AbstractView/S9780253016515",
-    "reply" => "301",
+    "reply" => "666",
     "redirect" => "https://www.dawsonera.com/depp/reader/protected/external/AbstractView/S9780253016515");
 echo (json_encode($outputVar));

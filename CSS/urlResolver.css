@@ -177,6 +177,161 @@ body{
 hr{
 	margin: 5px 0 10px 0;
 }
+
+.resultsContainer{
+    display: none;
+}
+
+#mainSite{
+    display:none;
+}
+
+.listControl{
+    display:none;
+}
+
+label{
+    font-size: small;
+}
+
+.reportContainer{
+    display:none;
+}
+
+.table {
+    table-layout:fixed;
+}
+
+.table td, .urlEntity{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+table tr, td{
+    height: 15px;
+    padding: 2px !important;
+}
+
+.tableContainer{
+    overflow-y: auto;
+    max-height: 78vh;
+}
+
+.table>tbody>tr>td{padding: 2px;}
+.table>tbody>tr>th{padding: 2px;}
+
+#dbSelect{
+    width: 70%;
+    padding: 0 2% 0 2%;
+}
+
+.noSierrraCounter{
+    width: 3%
+}
+.noSierraUrl{
+    width: 43%
+}
+.urlCode{
+    width: 5%;
+    font-size: 75%;
+    vertical-align: top;
+    padding-top: 5px;
+}
+.resolverButtonColumn{
+    width: 3%
+}
+
+.resolverButton{
+    padding: 0 2% 0 2%;
+    width: 70%
+}
+
+table tr:nth-child(even){
+    border-top: 1px solid #ddd;
+    background-color: #f9f9f9;
+}
+table tr:nth-child(odd){
+    border-top: 1px solid #ddd;
+    background-color: white;
+}
+
+.sierraBib{
+    width: 10%;
+}
+
+.sierraUrl{
+    width: 39%;
+}
+
+#processButton{
+    display: none;
+    padding: 0;
+}
+
+/*
+DATEPICKER
+*/
+/*Make data picker span outlined and disable select*/
+span{
+    -webkit-user-select: none; /* Chrome/Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+ */
+}
+
+/*Stop the stupid highlighting on available dates*/
+.available{
+    -webkit-user-select: none; /* Chrome/Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+ */
+    border-radius: 0;
+}
+
+/*Stop the stupid highlighting on unavailable dates*/
+.unavailable{
+    -webkit-user-select: none; /* Chrome/Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+ */
+    border-radius: 0;
+}
+
+.ranges>li{
+    border-radius: 0;
+}
+
+.applyButton, .cancelButton{
+    border-radius: 0;
+}
+
+/*Square buttons override custom date picker*/
+
+.ranges li,
+.daterangepicker,
+.daterangepicker td.active,
+.daterangepicker td.active:hover,
+.daterangepicker td.inactive,
+.daterangepicker td.start-date,
+.daterangepicker td.end-date,
+.daterangepicker td.available:hover,
+.daterangepicker td.start-date.end-date,
+.daterangepicker .input-mini.active,
+.daterangepicker .input-mini {border-radius: 0;}
+/*NOTE! class available doesn't reach the DOM until the daterangepicker object has been
+instantiated and placed into an assigned parent element*/
+.daterangepicker td.in-range available{background-color: rgb(204, 242, 255);}
+.ranges li , .ranges li.active{
+    background: none;
+    border: 2px solid #428bca;
+    color: #428bca;
+}
+.ranges li:hover , .ranges li.active:hover{
+    color: #FFF;
+    background: #428bca;
+    border: 2px solid #428bca;
+}
+.cancelBtn{
+    margin-left: 35px
+}
 /*
     END Jonathan Personal
 */

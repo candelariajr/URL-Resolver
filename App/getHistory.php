@@ -6,3 +6,7 @@
  * Time: 12:05 PM
  */
 
+require("dbHandler.php");
+if(!$conn){
+    echo "No Db";
+}

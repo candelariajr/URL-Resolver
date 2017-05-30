@@ -6,6 +6,6 @@
  * Time: 4:44 PM
  */
 $username = "root";
-$password = "";
-$database = "urlresolver";
+$password = "root";
+$database = "url_history";
 $server = "localhost";
