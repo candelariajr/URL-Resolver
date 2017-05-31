@@ -64,14 +64,6 @@
         </div>
     </div>
     <div class="row mainContainer">
-        <div class="col-sm-1">
-            <label class="control-label" for="userList">Updated By:</label>
-        </div>
-        <div class="col-sm-2" id="userListContainer">
-            <select id="userList">
-                <option>Default</option>
-            </select>
-        </div>
         <div class="col-sm-1 startControl">
             <label>Start:</label>
         </div>
@@ -79,7 +71,7 @@
             <button id="startButton" class="btn btn-success btn-outlined btn-block">Start</button>
         </div>
         <div class="col-sm-1 listControl">
-            <label class="bigLabel">Toggle List:</label>
+            <label class="bigLabel">List:</label>
         </div>
         <div class="col-sm-2 listControl">
             <button id="toggleButton" class="btn btn-primary btn-outlined btn-block">Toggle</button>
@@ -87,7 +79,7 @@
     </div>
     <div class="row mainContainer">
         <div class="col-sm-12">
-            <!-- <br> <=== I keep changing my mind on whether I like this or not-->
+            <!-- <br> <=== I keep changing my mind on whether I like this here or not-->
         </div>
     </div>
     <hr class="mainContainer">
@@ -99,8 +91,16 @@
                 <div id="totalUrlNumber" class="col-xs-1">0</div>
             </div>
         </div>
-        <div class="col-sm-8">
+        <div class="col-sm-4">
 
+        </div>
+        <div class="col-sm-2">
+            <label id="userListLabel" class="control-label" for="userList">Updated By:</label>
+        </div>
+        <div class="col-sm-2" id="userListContainer">
+            <select id="userList">
+                <option>Default</option>
+            </select>
         </div>
         <div class="col-sm-2">
             <button id="processButton" class="btn btn-primary btn-outlined btn-block">Copy Selected</button>
@@ -120,14 +120,13 @@
     ====================================================================================================
     -->
 
-
     <div class="row mainContainer pasteBinContainer">
         <div class="col-sm-12">
             <label for="urlPastebin">Paste URLs: </label>
         </div>
     </div>
     <div class="row mainContainer pasteBinContainer" id="pasteBinContainer">
-        <div class="col-sm-12">
+        <div class="col-sm-12" id="pasteBinParent">
             <pre><textarea id="urlPastebin" autocomplete="off" spellcheck="false"></textarea></pre>
         </div>
     </div>
@@ -136,7 +135,6 @@
     END OF PASTEBIN SECTION
     ====================================================================================================
     -->
-
 
     <!--
     ====================================================================================================
@@ -167,8 +165,6 @@
     ====================================================================================================
     -->
 
-
-
     <!--
     ====================================================================================================
     REPORTING/QUERY BUILDING SECTION
@@ -194,7 +190,7 @@
 
     <!--
     ====================================================================================================
-    MODAL DIALOG SECTION
+    MODAL URL COPY DIALOG SECTION
     ====================================================================================================
     -->
     <div id="urlCopyModal" class="modal fade" role="dialog">
@@ -220,7 +216,36 @@
 
     <!--
     ====================================================================================================
-    END OF MODAL DIALOG SECTION
+    END OF MODAL URL COPY DIALOG SECTION
+    ====================================================================================================
+    -->
+
+    <!--
+    ====================================================================================================
+    MODAL GENERAL DIALOG SECTION
+    ====================================================================================================
+    -->
+    <div id="urlGeneralModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        &times;
+                    </button>
+                    <h4 id="urlGeneralModalHeader" class="modal-title"></h4>
+                </div>
+                <div class="modal-body">
+                    <div id="urlGeneralModalBody"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--
+    ====================================================================================================
+    END OF MODAL GENERAL DIALOG SECTION
     ====================================================================================================
     -->
 </div>

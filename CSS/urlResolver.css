@@ -266,7 +266,18 @@ table tr:nth-child(odd){
 
 #processButton{
     display: none;
-    padding: 0;
+}
+
+#userListContainerLabel{
+    display: none;
+}
+
+#userList{
+
+}
+
+#urlPastebin{
+    white-space: nowrap;
 }
 
 /*

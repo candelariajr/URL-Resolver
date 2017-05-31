@@ -54,8 +54,8 @@ function populateUsersList(userArray){
         console.log(userArray[i]);
         select.append($("<option>").attr('value', userArray[i]).text(userArray[i]));
     }
-    $("#userList").remove();
     var userListContainer = $("#userListContainer");
+    userListContainer.empty();
     userListContainer.append(select);
     $(".selectpicker").selectpicker();
     displayUI();
@@ -68,17 +68,20 @@ function assignStartFunction(){
         console.log("start clicked");
         var pasteBin = $("#urlPastebin");
         var urlList = pasteBin.val();
+        pasteBin.val(" ");
         var urlArray = urlList.split("\n");
         var cleanArray = removeSpaces(urlArray);
         //Stop execution unless actual values are in pastebin
         if(cleanArray.length >= 1){
             //tidy up pastebin
             pasteBin.prop('disabled', true);
-            var cleanString = "";
+            var cleanString = "<pre style='overflow-x:auto'>";
             for(var i = 0; i < cleanArray.length; i++){
-                cleanString+= cleanArray[i] + "\n";
+                //cleanString+= cleanArray[i] + "<br />";
+                //$("#pasteBinParent").html(pasteBin.html() + cleanArray[i] + "&#013; &#010;");
+                cleanString += cleanArray[i] + "&#013; &#010;";
             }
-            pasteBin.val(cleanString);
+            $("#pasteBinParent").html(cleanString);
             $(".startControl").hide();
             $(".listControl").show();
             $(".resultsContainer").toggle();
@@ -132,6 +135,7 @@ function assignMainFunction(){
  * 4 - IF SOMETHING BREAKS, THIS IS WHERE YOU BEGIN!
  * */
 function processSierraData(lineArray){
+    showUserDropdown();
     console.log("Sierra data used");
     //Create table headers
     var trHead = $("<tr>");
@@ -456,4 +460,9 @@ function copyResultsToClipboard(){
 
 function submitResultsToDb(){
     alert("Submitted");
+}
+
+function showUserDropdown(){
+    $("#userListContainerLabel").show();
+    //$("#userList").show();
 }
