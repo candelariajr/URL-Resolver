@@ -81,6 +81,7 @@ function assignStartFunction(){
                 //$("#pasteBinParent").html(pasteBin.html() + cleanArray[i] + "&#013; &#010;");
                 cleanString += cleanArray[i] + "&#013; &#010;";
             }
+            cleanString += "</pre>";
             $("#pasteBinParent").html(cleanString);
             $(".startControl").hide();
             $(".listControl").show();
