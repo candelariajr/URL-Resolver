@@ -215,7 +215,7 @@ table tr, td{
 
 .tableContainer{
     overflow-y: auto;
-    max-height: 78vh;
+    max-height: 74vh;
 }
 
 .table>tbody>tr>td{padding: 2px;}

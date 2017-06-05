@@ -3,11 +3,7 @@
         "debug" : false,
         "handler" : "mysqlhandler.php",
         "users_list" : [
-            "Default",
-            "Bob Jerpo",
-            "Bob Loblaw",
-            "Harvey Birdman",
-            "The Dude"
+            "Default"
         ],
         "title" : "URL Resolver",
         "url_prefix" : "http://wncln.wncln.org/record="

@@ -277,7 +277,7 @@ function processUrlList(urlArray){
         var tdRefreshButton = $("<td>").append(
             $("<button>",{
                 class: "btn btn-success btn-xs resolverButton",
-                onclick: "resolveURL2(" + rowNum + ")"
+                onclick: "resolveURL(" + rowNum + ")"
             }).text("R")
         );
         tableRow.append(tdRefreshButton);
@@ -324,7 +324,7 @@ function resolveURL(row){
     //this was added to eliminate weird random
     //scoping errors with this callback.
     var localRow = row;
-    $.ajax({url:"/newUrl/App/resolver.php",
+    $.ajax({url:"/newUrl/App/resolver.php?url=" + url,
         dataType: "json",
         success: function(result){
             incrementCounter();
@@ -456,7 +456,35 @@ function showProcessButton(name, action){
 }
 
 function copyResultsToClipboard(){
-    alert("Copied");
+    var tempPasteArea = $("<textarea>");
+    var pasteAgg = "";
+    $("body").append(tempPasteArea);
+    $(".resolverCheck:checked").each(function(){
+        var idElement = $(this).parent().parent();
+        pasteAgg+=
+            "" + idElement.children().eq(0).text().trim()
+            + "\t" + idElement.children().eq(1).text().trim()
+            + "\t" + idElement.children().eq(2).text().trim()
+            + "\t" + idElement.children().eq(3).text().trim()
+            + "\r\n";
+    });
+    tempPasteArea.text(pasteAgg).select();
+    document.execCommand("copy");
+    tempPasteArea.remove();
+
+    /*
+
+     THIS IS THE CODE THAT WORKS
+
+     var $temp = $("<input>");
+     $("body").append($temp);
+     $temp.val($("#urlCopyModalText").text()).select();
+     document.execCommand("copy");
+     $temp.remove();
+    * */
+
+
+
 }
 
 function submitResultsToDb(){
