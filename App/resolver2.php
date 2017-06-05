@@ -8,10 +8,10 @@
 $enableRedirect = true;
 $replyArray = ["69", "420", "85", "123", "499", "000"];
 $urlArray = [
-    "www.beckysaysBEN-IS-A-HOE.com",
+    "www.beckysays LEAVE ME ALONE RON.com",
     "www.philcollinswrocksmysocksoff.com",
     "www.yourcatisabigfurryloser.net",
-    "www.imabossasbitch----------------DRIVE-THRU-STARBUCKS-REPRESENT.com",
+    "www.imabossass----------------DRIVE-THRU-STARBUCKS-REPRESENT.com",
     "www.myCatIsBetterThanYourCat.com",
     ""];
 

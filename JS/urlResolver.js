@@ -471,20 +471,6 @@ function copyResultsToClipboard(){
     tempPasteArea.text(pasteAgg).select();
     document.execCommand("copy");
     tempPasteArea.remove();
-
-    /*
-
-     THIS IS THE CODE THAT WORKS
-
-     var $temp = $("<input>");
-     $("body").append($temp);
-     $temp.val($("#urlCopyModalText").text()).select();
-     document.execCommand("copy");
-     $temp.remove();
-    * */
-
-
-
 }
 
 function submitResultsToDb(){
