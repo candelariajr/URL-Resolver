@@ -34,6 +34,7 @@
     -->
     <div class="row">
         <div class="col-sm-12"><h5><b id="resolverTitle">URL Resolver</b></h5></div>
+        <p id="urlPrefix" style="display:none"></p>
     </div>
     <div class="row mainContainer">
         <div class="col-sm-1">
@@ -127,7 +128,8 @@
     </div>
     <div class="row mainContainer pasteBinContainer" id="pasteBinContainer">
         <div class="col-sm-12" id="pasteBinParent">
-            <pre><textarea id="urlPastebin" autocomplete="off" spellcheck="false"></textarea></pre>
+            <pre><textarea id="urlPastebin" autocomplete="off" spellcheck="false">
+            </textarea></pre>
         </div>
     </div>
     <!--
@@ -178,7 +180,6 @@
     <div class="row reportContainer" id="reportContainer">
         <div class="col-sm-12">
             Future Report Grid
-            <button onclick="testShowDiag()">B</button>
         </div>
     </div>
 

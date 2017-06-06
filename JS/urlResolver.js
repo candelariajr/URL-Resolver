@@ -41,7 +41,7 @@ function processConfig(results){
         $("#resolverTitle").html(results.parameters.title);
     }
     if(results.parameters != null && results.parameters.url_prefix != undefined){
-
+        $("#urlPrefix").html(results.parameters.url_prefix)
     }
 }
 
@@ -87,7 +87,7 @@ function assignStartFunction(){
             $(".listControl").show();
             $(".resultsContainer").toggle();
             $(".pasteBinContainer").toggle();
-            if(urlArray[0].split("\t").length == 8){
+            if(urlArray[0].split("\t").length > 4){
                 processSierraData(cleanArray);
             }else{
                 processUrlList(cleanArray);
@@ -142,7 +142,7 @@ function processSierraData(lineArray){
     var trHead = $("<tr>");
 
     var thId = $("<th>", {
-        class: "noSierraCounter",
+        class: "sierraBib",
         text: "Bib"
     });
     trHead.append(thId);
@@ -179,6 +179,49 @@ function processSierraData(lineArray){
     trHead.append(thCheck);
     var parentTable = $("#urlTable");
     parentTable.append(trHead);
+    //create Sierra table rows
+    //Yes, this could have been brokem up with functions.
+    //TODO: REFUNCTIONALIZE THIS!
+    $("#totalUrlNumber").text(lineArray.length);
+    var urlPrefix = $("#urlPrefix").html();
+    //TODO start this at 0
+    for(var rowNum = 0; rowNum < lineArray.length; rowNum++){
+        //Sierra row
+        var splitLine = lineArray[rowNum].split("\t");
+        var tableRow = $("<tr>",{
+            id: "row" + rowNum
+        });
+        //Non-Sierra bib column
+        var tdBib = $("<td>");
+        tdBib.html("<a href='" + urlPrefix + splitLine[1] + "'>" + splitLine[1] + "</a>");
+        tableRow.append(tdBib);
+        //Sierra original url column
+        var tdUrl = $("<td>", {
+            id: "urlId" + rowNum,
+            onclick: "makeURLModal(\"" + splitLine[3] + "\")"
+        }).text(splitLine[3]);
+        tableRow.append(tdUrl);
+        //Sierra reply
+        var tdReply = $("<td>", {
+            id: "replyId" + rowNum
+        });
+        tableRow.append(tdReply);
+        //Sierra redirect
+        var tdRedir = $("<td>", {
+            id: "redirectId" + rowNum,
+            onclick: "makeURLModal($('#redirectId" + rowNum + "').text())"
+        });
+        tableRow.append(tdRedir);
+        //Sierra refresh button
+        var tdRefreshButton = $("<td>").append(
+            $("<button>",{
+                class: "btn btn-success btn-xs resolverButton",
+                onclick: "resolveURL(" + rowNum + ")"
+            }).text("R")
+        );
+        tableRow.append(tdRefreshButton);
+        parentTable.append(tableRow)
+    }
 }
 
 
@@ -400,24 +443,13 @@ function insertUrlData(reply, row){
     }
 }
 
+/*
+* Takes a URL as an argument and draws the url modal dialog
+* (Modal URL Copy Dialog Section #urlCopyModal) from it
+* This called by clicking on ANY URL Td element from the result pane
+* */
 function makeURLModal(url){
     $("#urlCopyModalText").text(url);
-    $("#urlCopyModal").modal('show');
-}
-
-/*
-* TESTING THING FOR TESTING PURPOSES! PLEASE DO NOT LET THIS OUT INTO THE WILD
-* Thought I would need this. It turns out the native library seems to handle this OK.
-* */
-function destroyModal(){
-
-}
-
-/*
-* TESTING THING FOR TESTING PURPOSES! PLEASE DO NOT LET THIS OUT INTO THE WILD
-* */
-function testShowDiag(){
-    $("#urlCopyModalText").text("New Text");
     $("#urlCopyModal").modal('show');
 }
 
@@ -433,7 +465,9 @@ function copyModalUrl(){
     $temp.remove();
 }
 
-//Called by X-shaped button at the top of the RESOLVER table
+//Called by X-shaped button at the top of the RESOLVER table This selects
+//all boxes if there are non selected. If any boxes are selected, it deselects
+//all.
 function toggleResolverSelectionCheckbox(){
     var checkedState = false;
     var urlCheckBoxes = $(".resolverCheck");
@@ -449,6 +483,14 @@ function toggleResolverSelectionCheckbox(){
     }
 }
 
+/*This draws the process button, attaches the text given to it and references
+* the function called by clicking said button
+* the arguments are provided by the two channels:
+*   ProcessSierraData and ProcessURLList
+*   ProcessSierraData adds submitToDb as the action
+*   processURllist adds CopyReultsToClipboard as the action
+*
+*/
 function showProcessButton(name, action){
     $("#processButton").show().text(name).click(function(){
         action();
