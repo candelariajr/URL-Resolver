@@ -489,7 +489,6 @@ function toggleResolverSelectionCheckbox(){
 *   ProcessSierraData and ProcessURLList
 *   ProcessSierraData adds submitToDb as the action
 *   processURllist adds CopyReultsToClipboard as the action
-*
 */
 function showProcessButton(name, action){
     $("#processButton").show().text(name).click(function(){
