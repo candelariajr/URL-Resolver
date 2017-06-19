@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Title</title>
@@ -14,9 +14,17 @@
     <script src="JS/jquery-3.1.1.min.js"></script>
     <script src="JS/bootstrap.min.js"></script>
     <script src="JS/bootstrap-select.js"></script>
+    <script src="JS/moment.min.js"></script>
+    <script src="JS/daterangepicker.js"></script>
     <link rel="stylesheet" type="text/css" href="CSS/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="CSS/bootstrap-theme.min.css">
     <link rel="stylesheet" type="text/css" href="CSS/bootstrap-select.min.css">
+    <link rel="stylesheet" type="text/css" href="CSS/daterangepicker.css">
+
+
+
+
+    <!-- JONATHAN CUSTOM CSS SHOULD ALWAYS BE IN MASTER OVERRIDE POSITION!-->
     <link rel="stylesheet" type="text/css" href="CSS/urlResolver.css">
 <body>
 <div class="container-fluid" id="loadingScreen">
@@ -128,8 +136,7 @@
     </div>
     <div class="row mainContainer pasteBinContainer" id="pasteBinContainer">
         <div class="col-sm-12" id="pasteBinParent">
-            <pre><textarea id="urlPastebin" autocomplete="off" spellcheck="false">
-            </textarea></pre>
+            <pre><textarea id="urlPastebin" autocomplete="off" spellcheck="false"></textarea></pre>
         </div>
     </div>
     <!--
