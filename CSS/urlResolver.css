@@ -280,6 +280,10 @@ table tr:nth-child(odd){
     white-space: nowrap;
 }
 
+#reportrange{
+    border: 1px solid black;
+}
+
 /*
 DATEPICKER
 */

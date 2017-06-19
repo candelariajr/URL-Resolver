@@ -1,6 +1,7 @@
 (function($){
     //on load get config object
     getConfigObject();
+    initDatePicker();
     //Assign the onclick events to the buttons
     assignStartFunction();
     assignToggleFunction();
@@ -109,8 +110,8 @@ function assignToggleFunction(){
 //assigns event listener to Reporting Button
 function assignReportFunction(){
     $('#reportButton').click(function(){
-        $(".mainContainer").hide(200);
-        $(".reportContainer").show(200);
+        $(".mainContainer").hide();
+        $(".reportContainer").show();
     });
 }
 
@@ -118,8 +119,8 @@ function assignReportFunction(){
 //assigns event listener to Main Button
 function assignMainFunction(){
     $('#mainButton').click(function(){
-        $(".mainContainer").show(200);
-        $(".reportContainer").hide(200);
+        $(".mainContainer").show();
+        $(".reportContainer").hide();
         $(".resultsContainer").hide();
         $(".pasteBinContainer").show();
     });
@@ -521,4 +522,38 @@ function submitResultsToDb(){
 function showUserDropdown(){
     $("#userListContainerLabel").show();
     //$("#userList").show();
+}
+
+function initDatePicker(){
+    //Remove this nesting of the datepicker on click functions.
+
+
+    //var start = moment().subtract(29, 'days');
+    var start = moment();
+    var end = moment();
+
+    function cb(start, end) {
+        $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+    }
+
+    $('#reportrange').daterangepicker({
+        showDropdowns: true,
+        linkedCalendars : false,
+        startDate: start,
+        endDate: end,
+        ranges: {
+            'Today': [moment(), moment()],
+            'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+            'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+            'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+            'This Month': [moment().startOf('month'), moment().endOf('month')],
+            'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')],
+            'Year to Date' : [moment().startOf('year'), moment()],
+            'Last Year': [moment().subtract(1, 'years').startOf('year'), moment().subtract(1, 'years').endOf('year')]
+        }
+    }, cb);
+
+    cb(start, end);
+    /*Add the custom classes without manual CSS overrides.*/
+    $(".range_inputs button").addClass("btn-outlined");
 }
