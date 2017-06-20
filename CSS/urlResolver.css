@@ -278,6 +278,7 @@ table tr:nth-child(odd){
 
 #urlPastebin{
     white-space: nowrap;
+    max-height:70vh;
 }
 
 #reportrange{

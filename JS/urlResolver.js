@@ -76,7 +76,7 @@ function assignStartFunction(){
         if(cleanArray.length >= 1){
             //tidy up pastebin
             pasteBin.prop('disabled', true);
-            var cleanString = "<pre style='overflow-x:auto'>";
+            var cleanString = "<pre style='overflow-x:auto; max-height:70vh;'>";
             for(var i = 0; i < cleanArray.length; i++){
                 //cleanString+= cleanArray[i] + "<br />";
                 //$("#pasteBinParent").html(pasteBin.html() + cleanArray[i] + "&#013; &#010;");
@@ -194,7 +194,7 @@ function processSierraData(lineArray){
         });
         //Non-Sierra bib column
         var tdBib = $("<td>");
-        tdBib.html("<a href='" + urlPrefix + splitLine[1] + "'>" + splitLine[1] + "</a>");
+        tdBib.html("<a href='" + urlPrefix + splitLine[1] + "' target='_blank'>" + splitLine[1] + "</a>");
         tableRow.append(tdBib);
         //Sierra original url column
         var tdUrl = $("<td>", {
@@ -221,7 +221,17 @@ function processSierraData(lineArray){
             }).text("R")
         );
         tableRow.append(tdRefreshButton);
-        parentTable.append(tableRow)
+        //Sierra checkbox
+        var tdCheckBox = $("<td>").append(
+            $("<input>", {
+                type: "checkbox",
+                class: "resolverCheck",
+                checked: 0
+            })
+        );
+        tableRow.append(tdCheckBox);
+        parentTable.append(tableRow);
+        resolveURL(rowNum);
     }
 }
 
@@ -450,7 +460,8 @@ function insertUrlData(reply, row){
 * This called by clicking on ANY URL Td element from the result pane
 * */
 function makeURLModal(url){
-    $("#urlCopyModalText").text(url);
+    var urlAsLink = "<a href='" + url + "' target='_blank'>" + url + "</a>";
+    $("#urlCopyModalText").html(urlAsLink);
     $("#urlCopyModal").modal('show');
 }
 
@@ -538,7 +549,11 @@ function initDatePicker(){
 
     $('#reportrange').daterangepicker({
         showDropdowns: true,
+        //This is where you put the date range LIMITS from the server!
+        minDate : "03/01/2017",
+        maxDate: "07/31/2017",
         linkedCalendars : false,
+        //This is where you put the CURRENT date range from the server!
         startDate: start,
         endDate: end,
         ranges: {
