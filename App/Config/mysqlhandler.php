@@ -20,5 +20,6 @@ if($conn->connect_error){
 function getConnectionReply(){
     GLOBAL $success;
     GLOBAL $message;
-    json_encode(array("success" => $success, "message" => $message, "fileName" => __FILE__));
+    $message = json_encode(array("success" => $success, "message" => $message, "fileName" => __FILE__));
+    return $message;
 }

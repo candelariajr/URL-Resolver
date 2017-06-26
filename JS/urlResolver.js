@@ -550,8 +550,8 @@ function initDatePicker(){
     $('#reportrange').daterangepicker({
         showDropdowns: true,
         //This is where you put the date range LIMITS from the server!
-        minDate : "03/01/2017",
-        maxDate: "07/31/2017",
+        minDate : "3/1/2017",
+        maxDate: "7/31/2017",
         linkedCalendars : false,
         //This is where you put the CURRENT date range from the server!
         startDate: start,
