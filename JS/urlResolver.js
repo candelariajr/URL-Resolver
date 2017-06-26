@@ -1,7 +1,7 @@
 (function($){
     //on load get config object
     getConfigObject();
-    initDatePicker();
+    //initDatePicker();
     //Assign the onclick events to the buttons
     assignStartFunction();
     assignToggleFunction();
@@ -18,6 +18,12 @@ function getConfigObject(){
         error: function(){
             $(".selectpicker").selectpicker();
             displayUI();
+        }
+    });
+
+    $.ajax({url:"/newUrl/App/dbHandler.php?action=getDates",
+        success: function(result){
+            processServerDates(result);
         }
     });
 }
@@ -535,7 +541,12 @@ function showUserDropdown(){
     //$("#userList").show();
 }
 
-function initDatePicker(){
+function processServerDates(result){
+    var jsonResults = JSON.parse(result);
+    initDatePicker(jsonResults[1].formatted_date, jsonResults[0].formatted_date);
+}
+
+function initDatePicker(startDate, endDate){
     //Remove this nesting of the datepicker on click functions.
 
 
@@ -550,8 +561,8 @@ function initDatePicker(){
     $('#reportrange').daterangepicker({
         showDropdowns: true,
         //This is where you put the date range LIMITS from the server!
-        minDate : "3/1/2017",
-        maxDate: "7/31/2017",
+        minDate : startDate,
+        maxDate: endDate,
         linkedCalendars : false,
         //This is where you put the CURRENT date range from the server!
         startDate: start,

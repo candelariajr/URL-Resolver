@@ -6,6 +6,6 @@
  * Time: 4:44 PM
  */
 $username = "root";
-$password = "root";
+$password = "";
 $database = "url_history";
 $server = "localhost";

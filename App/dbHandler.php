@@ -63,7 +63,7 @@ union
     $result = $conn->query($query);
     $data = array();
     while($row = $result->fetch_assoc()){
-        $data[] = json_encode($row);
+        $data[] = $row;
     }
     echo json_encode($data);
 }
